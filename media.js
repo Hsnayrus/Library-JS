@@ -38,4 +38,22 @@ class Media {
   }
 }
 
-let myBook = new Media();
+class Book extends Media {
+  /**
+   *
+   * @param {string} author
+   * @param {string} title
+   * @param {number} pages
+   */
+  constructor(author, title, pages) {
+    super(title);
+    this._author = author;
+    this._pages = pages;
+  }
+  get author() {
+    return this._author;
+  }
+  get pages() {
+    return this._pages;
+  }
+}
