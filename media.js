@@ -22,7 +22,11 @@ class Media {
    * @param {number} newRating
    */
   addRating(newRating) {
-    this._ratings.push(newRating);
+    if (newRating >= 1 && newRating <= 5) {
+      this._ratings.push(newRating);
+    } else {
+      console.log(`Ratings can only between 1 and 5, inclusive.`);
+    }
   }
   toggleCheckOutStatus() {
     this._isCheckedOut = !this._isCheckedOut;
