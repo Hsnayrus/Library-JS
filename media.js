@@ -101,6 +101,21 @@ class CD extends Media {
   get songs() {
     return this._songs;
   }
+  /**
+   *
+   * @returns {[string]} Songs, shuffled in a random order
+   */
+  shuffle() {
+    let shuffledSongs = Array(...this._songs);
+    for (let i = this._songs.length - 1; i > 0; i--) {
+      const indToSwapWith = Math.floor(Math.random() * (i + 1));
+      [shuffledSongs[i], shuffledSongs[indToSwapWith]] = [
+        shuffledSongs[indToSwapWith],
+        shuffledSongs[i],
+      ];
+    }
+    return shuffledSongs;
+  }
 }
 
 module.exports.Media = Media;
