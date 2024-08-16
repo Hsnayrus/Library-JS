@@ -77,3 +77,23 @@ class Movie extends Media {
     return this._runTime;
   }
 }
+
+class CD extends Media {
+  /**
+   *
+   * @param {string} artist
+   * @param {string} title
+   * @param {[string]} songs
+   */
+  constructor(artist, title, songs) {
+    super(title);
+    this._artist = artist;
+    this._songs = songs;
+  }
+  get artist() {
+    return this._artist;
+  }
+  get songs() {
+    return this._songs;
+  }
+}
