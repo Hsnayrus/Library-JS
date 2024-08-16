@@ -35,6 +35,7 @@ class Media {
     let ratingsSum = this._ratings.reduce((accumulator, currentVal) => {
       return accumulator + currentVal;
     }, 0);
+    return ratingsSum / this._ratings.length;
   }
 }
 
