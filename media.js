@@ -97,3 +97,8 @@ class CD extends Media {
     return this._songs;
   }
 }
+
+module.exports.Media = Media;
+module.exports.Book = Book;
+module.exports.CD = CD;
+module.exports.Movie = Movie;
